@@ -94,14 +94,14 @@ public class GameTriki {
         System.out.printf("\nEl jugador #1 lleva %d partidas ganadas\nMientras que el jugador #2 lleva %d partidas ganadas.\n", jugador_uno_partidas, jugador_dos_partidas);
     }
 
-    public void playAgain() {
+    public void gameMenu() {
         System.out.print("\nEstimado usuario, ¿que desea realizar?, presione:\n1. Para jugar otra partida\n2. Para imprimir el marcador actual\n3. Para salir\nPor favor digite su opcion -> ");
         int opcion = sc.nextInt();
         switch (opcion) {
             case 1: playGame();
                 break;
             case 2: imprimirMarcador();
-                    playAgain();
+                    gameMenu();
                 break;
             default:
                 System.out.println("\nChao, hasta la proxima!");
@@ -142,7 +142,7 @@ public class GameTriki {
         }
         turno = 1;
         inicializarTablero();
-        playAgain();
+        gameMenu();
 
         // Cierro el hilo del objeto de lectura Scanner y de salida System.out
         sc.close(); System.out.close();
