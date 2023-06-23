@@ -17,7 +17,7 @@ public class GameTriki {
 
     private static Scanner sc = new Scanner(System.in);
 
-    public TrikiNewball() {
+    public GameTriki() {
         tablero = new char[3][3];
         inicializarTablero();
     }
@@ -144,12 +144,12 @@ public class GameTriki {
         inicializarTablero();
         gameMenu();
 
-        // Cierro el hilo del objeto de lectura Scanner y de salida System.out
+        // Cierro el hilo del objeto de lectura y de salida
         sc.close(); System.out.close();
     }
 
     public static void main(String[] args) {
-        TrikiNewball gm = new TrikiNewball();
-        gm.playGame();
+        GameTriki mygame = new GameTriki();
+        mygame.playGame();
     }
 }
