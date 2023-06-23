@@ -1,5 +1,4 @@
 /**
- *  author:
     ──▀ █▀▀█ █▀▀ █──█ █▀▀ █▀▀█ █▀▀█ █▀▄▀█ 
     ──█ █──█ ▀▀█ █──█ █▀▀ █▄▄▀ █──█ █─▀─█ 
     █▄█ ▀▀▀▀ ▀▀▀ ─▀▀▀ ▀▀▀ ▀─▀▀ ▀▀▀▀ ▀───▀
@@ -111,7 +110,7 @@ public class GameTriki {
 
     public void playGame() {
         while (true) {
-            System.out.print("Turno del jugador #" + turno + ": ");
+            System.out.printf("Turno del jugador #%d: ", turno);
             int fila = sc.nextInt();
             int columna = sc.nextInt();
 
